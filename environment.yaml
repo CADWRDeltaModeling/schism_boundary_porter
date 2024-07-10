@@ -1,4 +1,4 @@
-name: schism_fluxconvert
+name: boundary_porter
 channels:
   - cadwr-dms
   - defaults
@@ -9,3 +9,4 @@ dependencies:
   - vtools3
   - pydsm
   - schimpy
+  - dask
