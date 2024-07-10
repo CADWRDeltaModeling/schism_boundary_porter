@@ -1,23 +1,23 @@
 schism_boundary,boundary_kind,source_kind,derived,source_file,var,sign,convert,rhistinterp_p,formula,note,
 coyote,flow,SCHISM,,,,,,,,,coyote
-ccc_rock,flow,CSV,,data/monthly_csv_example.csv,CHCCC006,1,CFS_CMS,2,,,ccc rs
-ccc_old,flow,CONSTANT,,,0,,,,,,cccold
-swp,flow,CSV,,data/monthly_csv_example.csv,CHSWP003,1,CFS_CMS,2,,,swp
-cvp,flow,CSV,,data/monthly_csv_example.csv,CHDMC004,1,CFS_CMS,2,,,cvp
-sjr,flow,DSS,,data/hist_v82_1day.dss,/HYDROV8.2.0/RSAN112/FLOW//1DAY/HIST_V82/,-1,CFS_CMS,1,,,sjr
-calaveras,flow,CSV,,data/monthly_csv_example.csv,RCAL009,-1,CFS_CMS,2,,,cal
-east,flow,CSV,TRUE,data/monthly_csv_example.csv,RCSM075;RMKL070,-1,CFS_CMS,2,(csv.RCSM075+csv.RMKL070),,east
-american,flow,CSV,TRUE,data/monthly_csv_example.csv,RSAC155,-1,CFS_CMS,2,(flux.american/(flux.sac+flux.american)).mul(csv.RSAC155),,amer
-sac,flow,CSV,TRUE,data/monthly_csv_example.csv,RSAC155,-1,CFS_CMS,2,(flux.sac/(flux.sac+flux.american)).mul(csv.RSAC155),,sac
+ccc_rock,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//D_RSL004_CCC004/DIVERSION//1MON/L2020A/,1,CFS_CMS,2,,,ccc rs
+ccc_old,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//D_OMR021_ORP000/DIVERSION//1MON/L2020A/,1,CFS_CMS,2,,,cccold
+swp,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_CAA003/CHANNEL//1MON/L2020A/,1,CFS_CMS,15,,,swp
+cvp,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_DMC003/CHANNEL//1MON/L2020A/,1,CFS_CMS,15,,,cvp
+sjr,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_SJR070/CHANNEL//1MON/L2020A/,-1,CFS_CMS,2,,,sjr
+calaveras,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_CLV004/CHANNEL//1MON/L2020A/,-1,CFS_CMS,2,,,cal
+east,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_MOK019/CHANNEL//1MON/L2020A/,-1,CFS_CMS,2,,,east
+american,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_AMR004/CHANNEL//1MON/L2020A/,-1,CFS_CMS,2,,,amer
+sac,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//C_SAC063/CHANNEL//1MON/L2020A/,-1,CFS_CMS,2,,,sac
 yolo_toedrain,flow,SCHISM,,,,,,,,,yolo td
 yolo,flow,CONSTANT,,,-0.001,,,,,,yolo
-northbay,flow,CSV,,data/monthly_csv_example.csv,SLBAR002,1,CFS_CMS,2,,,nb
+northbay,flow,DSS,,calsim/DCR2023_DV_9.0.0_Danube_Adj_v1.2.dss,//D_BKR004_NBA009/DIVERSION//1MON/L2020A/,1,CFS_CMS,2,,,nb
 napa,flow,SCHISM,,,,,,,,,napa
 ccc_victoria,flow,CSV,,data/monthly_csv_example.csv,CHVCT001,1,CFS_CMS,2,,,ccc vic
-sjr,ec,SCHISM,,,,,,,,,
-sac,ec,SCHISM,,,,,,,,,
-yolo_toedrain,ec,SCHISM,,,,,,,,,
-yolo,ec,SCHISM,,,,,,,,,
+sjr,ec,DSS,,dsm2/forecast.dss,//RSAN112/EC//1HOUR/TEST_FPART/,1,EC_PSU,,,,dcp 5
+sac,ec,CONSTANT,,,0.07,,,,Approx 150 uS at 25C,,
+yolo_toedrain,ec,CONSTANT,,,0.315,,,,Approx 650 uS at 25C,,
+yolo,ec,CONSTANT,,,0.07,,,,Approx 150 uS at 25C,,
 coyote,temp,SCHISM,,,,,,,,,
 sjr,temp,SCHISM,,,,,,,,,
 calaveras,temp,SCHISM,,,,,,,,,

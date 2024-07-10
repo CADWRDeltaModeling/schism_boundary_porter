@@ -75,7 +75,8 @@ def read_dss(file,pathname,sch_name=None,p=2.):
     Outputs an interpolated DataFrame of that variable
     """
     ts15min = pd.DataFrame()
-    ts=get_ts(os.path.join(dir,file), pathname = pathname)
+    print (pathname)
+    ts=get_ts(os.path.join(dir,file), pathname)
     for tsi in ts:
         b=(tsi[0].columns.values[0]).split("/")[2]
         c=(tsi[0].columns.values[0]).split("/")[3]
